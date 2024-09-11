@@ -1,9 +1,9 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost/vollmed_api
-    username: admin
-    password: admin
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ep-dry-sky-953847.us-east-2.aws.neon.tech/testes_db?user=AllysonAbreu&password=fXMRb04cuTtG&sslmode=require
+    username: AllysonAbreu
+    password: fXMRb04cuTtG
 
   jpa:
     show-sql: true
