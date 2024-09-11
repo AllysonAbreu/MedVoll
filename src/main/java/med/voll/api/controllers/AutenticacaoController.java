@@ -26,6 +26,8 @@ public class AutenticacaoController {
     @PostMapping
     public ResponseEntity efetuarLogin(@RequestBody @Valid DadosAutenticacao dados) {
         var authenticationToken = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
+        // String senhaCriptografada = BCrypt.hashpw(dados.senha(), BCrypt.gensalt());
+        // System.out.println("Senha criptografada: " + senhaCriptografada);
         var authenticate = manager.authenticate(authenticationToken);
 
         var tokenJWT = tokenService.gerarToken((Usuario) authenticate.getPrincipal());

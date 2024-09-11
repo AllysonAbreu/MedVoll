@@ -1,2 +1,1 @@
-alter table pacientes add ativo int;
-update pacientes set ativo = 1;
+alter table pacientes add ativo boolean;
